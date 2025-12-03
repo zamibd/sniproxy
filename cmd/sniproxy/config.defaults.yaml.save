@@ -1,5 +1,0 @@
-general:
-  upstream_dns: udp://1.1.1.1:53
-  upstream_dns_over_socks5: false
-  upstream_socks5:
-  bind_d
