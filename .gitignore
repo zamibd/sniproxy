@@ -1,0 +1,47 @@
+# Binaries
+sniproxy
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.o
+
+# Test binaries
+*.test
+*.out
+
+# Build artifacts
+dist/
+build/
+bin/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# Temporary files
+*.tmp
+*.log
+*.pid
+
+# Dependency directories
+vendor/
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# OS files
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Go specific
+go.work

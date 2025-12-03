@@ -1,0 +1,46 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Test files
+*_test.go
+*.test
+
+# Binaries
+sniproxy
+*.exe
+*.dll
+*.so
+*.dylib
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build artifacts
+dist/
+build/
+
+# Dependencies
+vendor/
+
+# Temporary files
+*.tmp
+*.log
+
+# GitHub Actions
+.github/
+
+# Documentation
+*.md
+LICENSE
+
+# CI/CD
+.gitlab-ci.yml
+.travis.yml
+Makefile

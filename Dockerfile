@@ -1,5 +1,5 @@
 FROM golang:alpine
-LABEL maintainer=" <hi@imzami.com>"
+LABEL maintainer="RAHMAT AL ZAMI <hi@imzami.com>"
 
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
