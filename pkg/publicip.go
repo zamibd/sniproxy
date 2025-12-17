@@ -13,7 +13,7 @@ import (
 // method 2: use a public HTTP service to get the public IP
 // note that neither of these methods are bulletproof, so there is always a chance that you need to enter the public IP manually
 func GetPublicIPv4() (string, error) {
-	conn, err := net.Dial("udp", "8.8.8.8:53")
+	conn, err := net.Dial("udp", "1.1.1.1:53")
 	if err != nil {
 		return "", err
 	}

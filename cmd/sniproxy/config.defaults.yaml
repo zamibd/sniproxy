@@ -7,8 +7,7 @@
 general:
   # Upsteam DNS URI. examples: Upstream DNS URI. examples: udp://1.1.1.1:53, tcp://1.1.1.1:53, tcp-tls://1.1.1.1:853, https://dns.google/dns-query
   # NOTE: if you're using SOCKS, avoid using UDP for upstream DNS
-  upstream_dns: udp://45.90.28.89:53
-  upstream_dns: udp://45.90.30.89:53
+  upstream_dns: udp://1.1.1.1:53 
   # enable send DNS through socks5
   upstream_dns_over_socks5: false
   # Use a SOCKS proxy for upstream HTTP/HTTPS traffic. Example: socks5://admin:
@@ -82,7 +81,7 @@ acl:
     # priority of the domain filter. lower priority means it's checked first. if multiple filters have the same priority, they're checked in random order
     priority: 20
     # Path to the domain list. eg: /tmp/domainlist.csv. Look at the example file for the format.
-    path: /opt/sniproxy/domains.csv
+    path: /root/sniproxy/domains.csv
     # Interval to re-fetch the domain list
     refresh_interval: 1h0m0s
   # IP/CIDR filtering
