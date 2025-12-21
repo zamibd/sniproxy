@@ -37,8 +37,6 @@ jobs:
           images: ${{ secrets.DOCKER_USERNAME }}/sniproxy
           tags: |
             type=raw,value=latest
-            type=ref,event=branch
-            type=sha,prefix={{branch}}-
 
       - name: Build and push
         uses: docker/build-push-action@v6
