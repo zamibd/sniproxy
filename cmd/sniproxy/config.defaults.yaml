@@ -7,11 +7,11 @@
 general:
   # Upsteam DNS URI. examples: Upstream DNS URI. examples: udp://1.1.1.1:53, tcp://1.1.1.1:53, tcp-tls://1.1.1.1:853, https://dns.google/dns-query
   # NOTE: if you're using SOCKS, avoid using UDP for upstream DNS
-  upstream_dns: udp://1.1.1.1:53 
+  upstream_dns: tcp-tls://1.1.1.1:853 
   # enable send DNS through socks5
   upstream_dns_over_socks5: false
   # Use a SOCKS proxy for upstream HTTP/HTTPS traffic. Example: socks5://admin:
-  upstream_socks5:
+  upstream_socks5: socks5://0348132041:unRycrwmaN@bd-02.imzami.com:17280
   # DNS Port to listen on. Should remain 53 in most cases. MUST NOT be empty
   bind_dns_over_udp: "0.0.0.0:53"
   # enable DNS over TCP. empty disables it. example: "127.0.0.1:53"
@@ -21,9 +21,9 @@ general:
   # enable DNS over QUIC. empty disables it. example: "127.0.0.1:8853"
   bind_dns_over_quic: "0.0.0.0:8853"
   # Path to the certificate for DoH, DoT and DoQ. eg: /tmp/mycert.pem
-  tls_cert: /etc/letsencrypt/live/test.imzami.com/fullchain.pem
+  tls_cert: /root/cert-CF/dns.bdtunnel.com/fullchain.pem
   # Path to the certificate key for DoH, DoT and DoQ. eg: /tmp/mycert.key
-  tls_key: /etc/letsencrypt/live/test.imzami.com/privkey.pem
+  tls_key: /root/cert-CF/dns.bdtunnel.com/privkey.pem
   # HTTP Port to listen on. Should remain 80 in most cases. use :80 to listen on both IPv4 and IPv6
   bind_http: "0.0.0.0:80"
   # bind additional ports for HTTP. a list of portsor ranges separated by commas. example: "8080,8081-8083". follows the same listen address as bind_http
@@ -40,11 +40,11 @@ general:
   # numeric values are kept for backward compatibility
   preferred_version:
   # Public IPv4 of the server, reply address of DNS A queries
-  public_ipv4: 103.159.37.151
+  public_ipv4: 
   # Public IPv6 of the server, reply address of DNS AAAA queries
-  public_ipv6: 2400:7920:0:3:24b:c2ff:fe5f:183e
+  public_ipv6: 
   # allow connections from sniproxy to RFC1918 addresses. default is false.
-  allow_conn_to_local: false
+  allow_conn_to_local: true
   # log level for the application. choices: debug, info, warn, error
   # by default, the logs are colored so they are not suited for logging to a file.
   # in order to disable colors, set NO_COLOR=true in the environment variables
@@ -110,6 +110,6 @@ acl:
     # any other overrides, enable this ACL with empty rules. DoH SNI will add a default rule and start.
     doh_sni: "test.imzami.com"
     # Path to the certificate for handling tls decryption. eg: /tmp/mycert.pem
-    tls_cert: /etc/letsencrypt/live/test.imzami.com/fullchain.pem
+    tls_cert: /root/cert-CF/dns.bdtunnel.com/fullchain.pem
     # Path to the certificate key handling tls decryption. eg: /tmp/mycert.key
-    tls_key: /etc/letsencrypt/live/test.imzami.com/privkey.pem
+    tls_key: /root/cert-CF/dns.bdtunnel.com/privkey.pem
