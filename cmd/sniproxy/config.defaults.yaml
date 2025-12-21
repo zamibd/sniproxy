@@ -40,9 +40,9 @@ general:
   # numeric values are kept for backward compatibility
   preferred_version:
   # Public IPv4 of the server, reply address of DNS A queries
-  public_ipv4: 
+  public_ipv4: 103.187.22.221
   # Public IPv6 of the server, reply address of DNS AAAA queries
-  public_ipv6: 
+  public_ipv6: 2400:7920::204:8ff:fe85:50ac
   # allow connections from sniproxy to RFC1918 addresses. default is false.
   allow_conn_to_local: true
   # log level for the application. choices: debug, info, warn, error
